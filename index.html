@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="pfp.jpg" alt="Profile Picture" id="profilePic">
+                <h3 id="userName">K98</h3>
+                <p id="userEmail">k98@whatevs.com</p>
+                <button onclick="logout()">Logout</button>
+            </div>
+            <h2>Chats</h2>
+            <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchContacts()">
+            <ul id="contactList">
+                <li onclick="switchChat('This')">This</li>
+                <li onclick="switchChat('That')">That</li>
+                <li onclick="switchChat('Who')">Who</li>
+            </ul>
+        </div>
+
+        <div class="chat-box">
+            <div class="chat-header">
+                <h3 id="chatTitle">Select a chat</h3>
+                <button class="theme-toggle" onclick="toggleDarkMode()">🌗</button>
+            </div>
+            <div class="messages" id="chatMessages"></div>
+            <div class="input-container">
+                <input type="text" id="messageInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+                <button class="send-btn" onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
